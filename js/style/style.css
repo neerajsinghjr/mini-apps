@@ -1,0 +1,21 @@
+#spin {
+	width: 250px;
+	height: 250px;
+	margin: 0px auto;
+}
+
+span {
+	
+}
+#button {
+	width: 100px;
+	height: 60px;
+	color: #fff;
+	border-radius: 10px 5px;
+	display: block;
+	margin: 0px auto;
+	font-size: 35px;
+	font-weight: bold;
+	font-family: "bree-sherif";
+	background-color: #b4b4b4;
+}

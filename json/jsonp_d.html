@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jsonp_d | Apple itunes API</title>
+</head>
+<body>
+
+	<h2>Apple Itunes Music Search</h2>
+	<p>Input the details in the search bar to query the itunes</p>
+	<div class="DataTable"></div>
+	<script>
+		function createScript(){
+ 			var url = "https://itunes.apple.com/search?term&limit=50&callback=display";
+			var newScriptElement = document.createElement('script');
+ 			newScriptElement.setAttribute('src', url);
+ 			newScriptElement.setAttribute('id', 'json_d');
+ 			var oldScriptElement = document.getElementById("json_d");
+ 			var head = document.getElementsByTagName('head')[0];
+ 			if( oldScriptElement == null){
+ 				head.appendChild(newScriptElement);
+ 			}
+ 			else{
+ 				head.replaceChild(newScriptElement, oldScriptElement);
+ 			}
+ 			
+ 		}
+
+ 		function display(object){
+ 			// API Response
+ 			console.log(object);
+ 			var output = "<table border=1 style='padding:2px 3px;'>" + "<tr><th>Sno</th><th>Artist ID</th><th>Artist Name</th><th>Track Name</th><th>Track Number</th>" + "<th>Track Price</th>";
+ 			// Tabular Representation
+ 			for (var x=0; x < object.resultCount; x++){
+				// Appending data in Table 
+				output += "<tr><td>" + (x+1) + "</td><td>" + object.results[x].artistId + "</td><td>" + object.results[x].artistName + "</td><td>" + object.results[x].trackName + "</td><td>" + object.results[x].trackNumber + "</td><td>" + object.results[x].trackPrice + "</td></tr>";
+ 			}
+ 			output += "</table>";
+ 			document.getElementById('DataTable').innerHTML = output;
+ 		}
+
+	</script>
+
+</body>
+</html>

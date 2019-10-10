@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Js & Jq | Change Image</title>
+	<link rel="stylesheet" href="style/style.css">
+	<script src="js/jquery-min.js"></script>
+</head>
+<body>
+	<div class="fancy">	
+		<p >Jihyo Album</p>
+	</div>
+
+	<div class="outerFrame">
+			<img src="img/jihyo/img-1.jpg" class="fancyYou" id="fancyYou" >
+	</div>
+
+	<div class="Message">
+		<!-- Dynamic Element will be append here -->
+		<p class="HaHaMsg">Hope, You like my work !</p>
+	</div> 
+
+
+
+	<div class="centerBlock">
+		<button type="button" class="button" id="addJq">Next</button>
+		<button type="button" class="button" id="removeJq">Prev</button>
+	</div>
+
+	
+	<script>
+		$(document).ready(function() {
+			var control = 1;
+
+			/* 
+			APPROACH 1: BAD APPROACH, imageSlider() is called of when the page loads !
+			PROBLEM: $('').click( imageSlider(params) );
+			*/
+			// $("#addJq").click(imageSlider("add"));
+			// $("#removeJq").click(imageSlider("remove"));
+
+			// function imageSlider(status) {
+			// 	console.log(status);
+			// }
+			
+			
+			/*
+			APPROACH 2: GOOD APPROACH, imageSlider() is called when the button is pressed !
+			SOLUTION: $('').on("click", function(){ functionCalled(params) });
+			*/
+			$("#addJq").on("click", function() {
+				imageSlider("add");
+			});
+
+
+			$("#removeJq").on("click", function() {
+				imageSlider("remove");
+			});
+
+			function imageSlider(status) {
+				// console.log(status);
+				switch(control) {
+					case 1:
+							if(control === 1 && status  == 'add'){
+								$(".Message").empty();	
+								$('img').attr("src", "img/jihyo/img-2.jpg");
+								++control;
+								break;
+							}else{
+								$(".Message").html("<p class='HaHaMsg'>You are at the beginning index....</p>");
+								$("displayMessage").text("You are at the first index!");
+								console.log("You are at the first index!");
+								break;
+							}
+					case 2:
+							if(control === 2 && status  == 'add'){
+								$('img').attr("src", "img/jihyo/img-3.jpg");
+								++control;
+								break;
+							}else{
+								--control;
+								$('img').attr("src", "img/jihyo/img-1.jpg");
+								break;
+							}
+					case 3:
+							if(control === 3 && status  == 'add'){
+								$('img').attr("src", "img/jihyo/img-4.jpg");
+								++control;
+								break;
+							}else{
+								--control;
+								$(".Message").empty();
+								$('img').attr("src", "img/jihyo/img-2.jpg");
+								break;
+							}
+					case 4: 	
+							if(status == 'add'){
+								$(".Message").html("<p class='HaHaMsg'>Thankyou very much!</p>");
+								++control;
+								break;
+							}else{
+								--control;
+								$('img').attr("src", "img/jihyo/img-3.jpg");
+							}
+					default:
+							if(status == 'add'){
+								$(".Message").empty();
+								$('img').attr("src", "img/jihyo/img-1.jpg");
+								control = 1;
+							}else{
+								--control;
+								$('img').attr("src", "img/jihyo/img-3.jpg");
+							}
+				} // End of switch();
+			} // End of imageSlider();
+		});  // End of ready();
+	</script>
+
+</body>
+</html>

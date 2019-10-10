@@ -1,0 +1,19 @@
+.text-danger {
+    color: red;
+    font-size: 16px;
+}
+
+.text-success {
+    color: green;
+    font-size: 16px;
+}
+
+.text-warning {
+    color: yellow;
+    font-size: 16px;
+}
+
+.text-info {
+    color: blue;
+    font-size: 16px;
+}

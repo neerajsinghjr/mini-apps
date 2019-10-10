@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery | Selection</title>
+	<link rel="stylesheet" href="style/style.css">
+	<script src="js/jquery-min.js"></script>
+</head>
+<body>
+
+	<h2 class="mouseenter mouseleave">Mouse Detection Event</h2>
+
+	<ul>
+		<li>First Item</li>
+	</ul>
+	<div>
+		<button class="addElement">Add</button>
+		<button class="removeElement">Remove</button>
+	</div>
+
+	<script>
+
+		$(document).ready(function() {
+			
+			$(".mouseenter").mouseenter(function() {
+				console.log("Mouse detected!");
+			});
+			
+			$(".mouseleave").mouseleave(function() {
+				console.log("Mouse undetected!");
+			})
+
+			$(".removeElement").click(function() {
+				/*
+				
+				*/
+			});
+
+			$(".addElement").click(function() {
+				/*
+				-) append() & prepend() just append the element as child before and after the parent element.
+				-) Syntax: 
+						$("parentElement").append|before("child content with html tag");
+				*/
+				// $("ul").append("<li>Second Item</li>");
+				// $("ul").prepend("<li>Third Item</li>");
+
+				/*
+				-) appendTo() | prepenedTo() works the same way but difference in the syntax.
+				-) Syntax: 
+						$("child content with html tag").appendTo|prependTo("parentElement")
+				*/
+				// $("<h2>Appened H2 After List</h2>").appendTo("ul");
+				// $("<h2>Prepend H2 After List</h2>").prependTo("ul");
+
+				/* 
+				-) before() & after() insert the element before and after the selected elements 
+				-) Syntax: 
+						$("parentElement").before|after("child content as the next sibling")
+				*/
+				$("ul").before("<h2>Before the list</h2");
+				$("ul").after("<h2>After the list</h2");
+
+			});
+
+		});
+	</script>
+</body>
+</html>

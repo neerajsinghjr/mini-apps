@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery | Selection</title>
+	<link rel="stylesheet" href="style/style.css">
+	<script src="js/jquery-min.js"></script>
+</head>
+<body>
+	<p class="fancy">Jquery Selection</p>
+
+	<div class="outerFrame">
+			<img src="img/jihyo/img-1.jpg" class="fancyYou" id="fancyYou" >
+	</div>
+
+	<div class="hideToggle">
+		<p class="HaHaMsg">HaHaaHaaa! You reached at the End....</p>
+	</div>
+
+	<div class="centerBlock">
+		<button type="button" class="button" id="addJq">Next</button>
+		<button type="button" class="button" id="removeJq">Prev</button>
+	</div>
+
+	<script>
+		var control = 1;
+		$(document).ready(function() {
+
+			// Approach 1: Switch() Method
+			$('#addJq, img').click(function (){
+				// console.log("addJ Called!")
+				switch(control) {
+					case 1: 
+							$('img').attr('src', 'img/jihyo/img-2.jpg' );
+							$('img').attr('class', 'fancyYou');
+							$('img').attr('id', 'fancyYou');
+							++control;
+							break;
+					case 2:
+							$('img').attr('src', 'img/jihyo/img-3.jpg' );
+							$('img').attr('class', 'fancyYou');
+							$('img').attr('id', 'fancyYou');
+							++control;
+							break;
+					case 3: 
+							$('img').attr('src', 'img/jihyo/img-4.jpg' );
+							$('img').attr('class', 'fancyYou');
+							$('img').attr('id', 'fancyYou');
+							++control;
+							break;
+					case 4:
+							$('img').attr('src', 'img/jihyo/img-1.jpg' );
+							$('img').attr('class', 'fancyYou');
+							$('img').attr('id', 'fancyYou');
+							++control;
+							break;
+					default: 
+							$('.hideToggle').toggleClass("hideToggle");
+							control = 1;
+				} //End of switch() control;
+			}); //End of click() event; 
+		}); //End of ready() function;
+
+	</script>
+
+</body>
+</html>

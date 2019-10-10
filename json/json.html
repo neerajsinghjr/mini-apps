@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Json | Apple Itune Call</title>
+</head>
+<body>
+	<script>
+		var x, dataObject, serverResponse; 
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function (){
+			if(this.readyState == 4 && this.status == 200){
+				dataObject = JSON.parse(this.serverResponse);
+				console.log("Output: " + dataObject.results[0].trackName);
+			}
+		};
+		xhttp.open("GET", "http://itunes.apple.com/search?term=taylor+swift&limit=5", true);
+		xhttp.send();
+	</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript | Slice() Method</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		var array = [10, 20, 30, 40, 50, 60, 70, 80];
+	// sliceArray = 60, 70, 80 | array = 10, 20, 30, 40, 50, 60, 70, 80
+		var sliceArray = array.slice(5);
+	// Slice dont change the original array !!!
+		console.log(sliceArray);
+		console.log(array);
+
+	// spliceArray = 60, 70 ,80 | array = 10, 20, 30, 40, 50
+		var spliceArray = array.splice(5);
+		console.log(spliceArray);
+	// Splice always try to change the original array !!!
+		console.log(array); 
+
+	// spliceArray = 10, 20, 30, 40, 50 | array = 60, 70 ,80
+		var spliceArray = array.splice(0, 5);
+	// Splice always try to change the original array !!!
+		console.log(spliceArray);
+		console.log(array);
+
+	</script>
+</body>
+</html>

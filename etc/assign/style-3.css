@@ -1,0 +1,8 @@
+header, body, div {
+	margin: 0px;
+	padding: 0px;
+}
+
+header {
+	background-color: #646363;
+}

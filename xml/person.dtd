@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--========================================
+
+	This is external file for the testing
+	of the Document Type Defination in XML.
+
+============================================-->
+
+
+
+
+<!-- Document Type Defination -->
+<!DOCTYPE root [
+
+	<!ELEMENT person (first, middle, last)>
+	<!ELEMENT first (#PCDATA)>
+	<!ELEMENT middle (#PCDATA)>
+	<!ELEMENT last (#PCDATA)>
+	<!ELEMENT mail (#PCDATA)>
+
+	<!ELEMENT student (name, roll)>
+	<!ELEMENT name (#CDATA)>
+	<!ELEMENT rol (#CDATA)>
+
+
+]>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery| Animate Effect</title>
+	<link href="style/style.css" rel="stylesheet">
+ 	<script src="js/jquery-min.js"></script>
+</head>
+<body>
+
+	<div class="box-1">
+		<!-- <p>Hello World</p> -->
+	</div>
+
+	<button type="button" id="start" class="button">Start</button>
+	<button type="button" id="reset" class="button">Reset</button>
+	<button type="button" id="stop" class="button">Stop</button>
+
+	<script>
+
+		$(document).ready(function(){
+			$("#start").click(function(){
+				$('.box-1').animate({
+					width: '500px',
+					height: '500px',
+					fontSize: '20px'
+				}, "30000", "swing");	// 1000 * 20 = 20,000
+			});
+
+			$('#reset').click(function(){
+				$('.box-1').animate({
+					width: '150px',
+					height: '150px',
+					fontSize: '14x'
+				}, "fast", "linear");
+			});
+
+			$('#stop').click(function(){
+				$('.box-1').stop();
+			})
+		});
+	</script>
+</body>
+</html>

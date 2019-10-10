@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Js | AddEventLister | Bubble or Capture</title>
+	<style>
+		.bubble {
+			width: 600px;
+			height: 200px;
+			margin: 0 auto;
+		 	padding: 20px;
+		 	background-color: orange;
+		 	font-weight: bolder;
+		}
+		.bubble > p { 
+			margin: 30px;
+			padding: 30px;
+			background-color: #fff;
+		}
+		.capture {
+			margin: 30px;
+			width: 600px;
+			height: 200px;
+			margin: 0 auto;
+		 	padding: 20px;
+		 	background-color: yellow;
+		 	font-weight: bolder;
+		}
+		.capture > p { 
+			margin: 30px;
+			padding: 30px;
+			background-color: #fff;
+		}
+	</style>
+</head>
+<body>
+
+<!-- Event Bubble -->
+<div id="bubble-id" class="bubble">
+	<h2>Event Bubbling</h2>
+	<p id="bubble">Check the bubble</p>
+</div>
+
+<!-- Event Capture -->
+<div id="capture-id" class="capture">
+	<h2>Event Capturing</h2>
+	<p id="capture">Check the Capturing</p>
+</div>
+
+<script>
+
+// Bubble Event Listener;
+var bubble = document.getElementById('bubble-id');
+bubble.addEventListener('click', function() {
+	alert("Parent is Called!");
+}, false);
+
+var bubble = document.getElementById('bubble');
+bubble.addEventListener('click', function() {
+	alert("Child is Called!");
+}, false);
+
+
+// Capture Event Listener;
+var capture = document.getElementById('capture');
+capture.addEventListener('click', function() {
+	alert("Child Tag Called !");
+}, true);
+
+var capture = document.getElementById('capture-id');
+capture.addEventListener('click', function() {
+	alert("Parent Tag Called !");
+}, true);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript | Array Iteration</title>
+</head>
+<body>
+	
+	<script>
+		var days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+		var num = [10, 21, 30, 47, 50, 65, 70, 80, 90 ,1, 1000];
+
+	// CASE 1: yourArray.forEach(callback)
+	// yourArray.forEach(callback) is basic for loop for function callback(value, index, yourArray){}
+		
+		// days.forEach(arrayIterate);
+		
+		// call response 1
+		// function arrayIterate(value){
+		// 	console.log(value);
+		// }
+
+		// call response 2
+		// array.forEach(element => console.log(element));	
+
+		// call response 3
+		// function arrayIterate(value, index, days){
+		// 	console.log("Index("+index+") -> Value("+value+") -> Array["+days+"]");
+		// }
+		
+	// CASE 2: yourArray.forMap(callback)
+	// yourArray.map(callback) can return the value from its callback, which can't be in array.forEach()
+
+		// var result = num.map(arrayIterate);
+
+		// call response 1
+		// function arrayIterate(value, index, num){
+		// 	console.log("Callback: " + value);	
+		// 	return value*22;
+		// }
+		// console.log("Result: " + result);	
+
+	// CASE 3: yourArray.filter(callback)
+	// yourArray.filter can return the filter elements as per your condition in the test.
+
+		// var result = num.filter(filterElement);
+
+		// function filterElement(value, index, number){
+		// 	if (value % 3 == 0)
+		// 		return value;
+		// }
+		// console.log("3 Divisible is "+ result);
+
+	//CASE 4: yourArray.every(callback)
+	// yourArray.every() return true, if all the element passes the test otherwise false if they fail
+		
+		// var result = num.every(filterElement);
+
+		// function filterElement(value, index, number){
+		// 	if (value % 2 == 0)
+		// 		return value;
+		// }
+		// console.log("Array is a Divisible of 3 (True/False): "+ result);	
+
+	//CASE 5: yourArray.some(callback)
+	// yourArray.some() return true if some elements passes the test or return false if they all fail.
+		
+		// var result = num.some(filterElement);
+
+		// function filterElement(value, index, number){
+		// 	if (value % 2 == 0)
+		// 		return value;
+		// }
+		// console.log("Array is a Divisible of 2 (True/False): "+ result);	
+
+	//CASE 5: yourArray.reduce(callback)
+	// yourArray.reduce() make juice of all the elements kepts inside the array and make it one.
+		
+		// var result = num.reduce(reduceElements);
+
+		// function reduceElements(total, value, index, array){
+		// 		return total - value;
+		// }
+		// console.log(result);
+
+	//CASE 6: yourArray.reduceRight(callback)
+	// yourArray.reduceRight() works in the same as reduce() but from the right side to the left side.
+
+		// var result = num.reduceRight(reduceRightElement)
+
+		// function reduceRightElement(total, value, index, array){
+		// 	return total - value;
+		// }
+		// console.log(result);
+
+	//CASE 7: yourArray.find() &  
+	// yourArray.find() looks for an element in list & yourArray.findIndex() retrunr the index of the element.
+		// var findResult = num.find(findElement);
+		// var findIndexResult = num.findIndex(findIndex);
+
+		// function findElement(value){
+		// 	if (value < 10)
+		// 		return value;
+		// }
+		// function findIndex(value){
+		// 	if (value < 10)
+		// 		return value;
+		// }
+		// console.log("Find: " + findResult + " @ Index: " + findIndexResult);
+
+	//CASE 8: yourArray.indexOf(callback)
+	//yourArray()return the index of the element directly without any callback function.
+
+		var result = num.indexOf(1000);
+		console.log(result);
+	</script>
+
+
+</body>
+</html>

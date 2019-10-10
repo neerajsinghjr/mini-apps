@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript | For Loop</title>
+</head>
+<body>
+	<script>
+		var x;
+		var names = ["abhishek", "mayank", "yusuf", "zakhir"];
+		var string = "NeerajSinghJunior";
+		var Name = {
+			firstName: "Neeraj",
+			middleName: "Singh",
+			lastName: "Junior",
+			fullName: function(){
+				return (this.firstName + this.middleName + this.lastName);
+			}
+		} 
+
+	/*--------------------------------- for/in Loop Case ----------------------------*/
+		
+		// CASE 1	
+		for(x in Name){
+			console.log(Name[x]);
+		}
+		console.log(Name.fullName());
+		
+
+	/*--------------------------------- for/of Loop Case -----------------------------*/
+
+		// CASE 1: POSITIVE
+		// for(x of string){
+		// 	console.log(x);
+		// }
+
+		// CASE 1: NEGATIVE
+		// for(x in string){
+		// 	console.log(x);
+		// }
+
+		// CASE 2: POSITIVE
+		// for(x of names){
+		// 	console.log(x);
+		// }
+
+		// CASE 2: NEGATIVE
+		// for(x in names){
+		// 	console.log(x);
+		// }
+
+	</script>
+</body>
+</html>

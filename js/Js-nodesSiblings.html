@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Js | Node Siblings</title>
+</head>
+<style>
+.layout {
+	background-color: #b3b3b3;
+	width: 500px;
+	height: 500px;
+	margin: 100px auto;
+	padding: 20px 20px;
+	text-align: justify;
+}
+.output {
+	color: pink;
+	font-size: 28px;
+	font-weight: lighter;
+	font-style: italic;
+	text-align: justify;
+	padding: 10px 10px;
+}
+.reaction {
+	width: 600px;
+	height: auto;
+	margin: 0px auto;
+	display: block;
+}
+.reaction > .emoji {
+	width: 65px;
+	height: 30px;
+	font-size: 18px;
+	color: #fff;
+	background-color: #AB2F14;
+	padding: 10px;
+	border-radius: 5px;
+	margin: 5px;
+}
+</style>
+
+<body>
+<div class="layout">
+
+	<p id="para-id">Loram ispum is good sample for content writing</p>	
+	<h1 class="para-class">Hello Good Morning, i am paragraph number 1.</h1>
+	<h2 class="para-class">Hello Good Afternoon, i am paragraph number 2.</h2>
+	<h3 class="para-class">Hello Good Night, i am paragraph number 3.</h3>
+	<b><cite>Loram ispum is not comes under any &copy; copyright policy act</cite></b>
+	<p id="para-id">Share your View</p>
+	<div class="reaction">
+		<span class="emoji">Happy</span>
+		<span class="emoji">Average</span>
+		<span class="emoji">Disappoint</span>
+		<span class="emoji">Excellent</span>
+	</div>
+
+	<!-- output -->
+	<div id="here">
+		
+	</div>
+
+</div>
+
+
+
+<script>
+
+		//	unit-testing 
+	var a = document.getElementById("para-id")
+	var b  = document.getElementsByClassName("para-class");
+	var c = document.getElementsByTagName("span");
+		
+		//	appending child dyanmically
+	var element = document.createElement('p');
+	var attribute = element.setAttribute("class", "output");
+	var attribute = element.setAttribute("id", "existChild");
+	var content = document.createTextNode("Hello there, I have been created DYNAMICALLY !");
+	element.appendChild(content);
+	var here = document.getElementById('here');
+	here.appendChild(element);
+
+		// inserting child at specific location
+	var element = document.createElement("p");
+	var para = document.createTextNode("Hurrah! i have been come first.");
+	var attribute = element.setAttribute("class", "output");
+	element.appendChild(para);
+	var existChild = document.getElementById("existChild");
+	var parent = document.getElementById('here');
+	parent.insertBefore(element, existChild);
+
+
+
+	// for(var x=0; x< c.length; c++) {
+	// 	console.log(c[x].lastChild.nodeValue);
+	// }
+
+	// console.log(document.reaction);
+	// console.log(c[3]);
+	// console.log(a.nodeName);
+	// console.log(b[0].firstChild.nodeValue);
+	// console.log(a.nodeType);
+
+
+
+</script>
+
+
+</body>
+</html>

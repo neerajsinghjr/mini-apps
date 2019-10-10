@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery | Dom Child</title>
+	<link href="style/style.css" rel="stylesheet">
+	<script src="js/jquery-min.js"></script>
+</head>
+<body>
+	<ol class="guidelinesList">
+		<li class="guidelinesHints">Change</li>
+	</ol>
+
+	<button type="button" class="button" id="change">Change</button>
+
+	<script>
+		var controller = "append";
+		$(document).ready(function() {
+			$("#change, .guidelinesHints").click(function() {
+				console.log("change call!");
+				if(controller == "append"){
+					$("ol").before("<div class='red-box'>Before</div>").slideUp(4000);
+					$("ol").after("<div class='green-box'>After</div>").slideDown(2000);
+					controller = "remove";
+				}else{
+					$("div:last-child").remove().fadeOut(10000);
+					$("div:first-child").remove().fadeOut(10000);
+				}
+			});
+
+		});	
+	</script>
+</body>
+</html>

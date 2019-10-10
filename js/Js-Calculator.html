@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+   <head></head>
+   <body>
+      <form name=”calculator”>
+         <table cellpadding="4" cellspacing="2">
+            <tr>
+              <th colspan="4">
+                 <input type="text" name="display" id="display">
+              </th>
+           </tr>
+           <tr>
+              <td><button type="button" value='1' onclick="getValue(this.value)">1</button></td>
+              <td><button type="button" value='2' onclick="getValue(this.value)">2</button></td>
+              <td><button type="button" value='3' onclick="getValue(this.value)">3</button></td>
+              <td><button type="button" value='/' onclick="getValue(this.value)">/</button></td>
+           </tr>
+           <tr>
+              <td><button type="button" value='4' onclick="getValue(this.value)">4</button></td>
+              <td><button type="button" value='5' onclick="getValue(this.value)">5</button></td>
+              <td><button type="button" value='6' onclick="getValue(this.value)">6</button></td>
+              <td><button type="button" value='*' onclick="getValue(this.value)">*</button></td>
+            </tr>
+            <tr>
+              <td><button type="button" value='7' onclick="getValue(this.value)">7</button></td>
+              <td><button type="button" value='8' onclick="getValue(this.value)">8</button></td>
+              <td><button type="button" value='9' onclick="getValue(this.value)">9</button></td>
+              <td><button type="button" value='+' onclick="getValue(this.value)">+</button></td>
+            </tr>
+            <tr>
+              <td><button type="button" value='.' onclick="getValue(this.value)">.</button></td>
+              <td><button type="button" value='0' onclick="getValue(this.value)">0</button></td>
+              <td><button type="button" value='=' onclick="solve()">=</button></td>
+              <td><button type="button" value='-' onclick="getValue(this.value)">-</button></td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <button type="button" value='result' onclick="solve()">Result</button>
+              </td>
+              <td colspan="2">
+                <button type="button" value='clear' onclick="cls()">Clear</button>
+              </td>
+            </tr>
+        </table>
+      </form>
+
+      <script>
+            function getValue(temp){
+              console.log("getValue Executed!");
+              console.log("value: " + temp + " | Type: " + typeof value);
+              var display = document.getElementById('display');
+              display.value += temp;
+            }
+
+            function solve(){
+              console.log("Solve Executed!");
+              var inputs = document.getElementById('display').value;
+              var output = eval(inputs);
+              console.log(output);
+              document.getElementById('display').value = output;
+            }
+
+            function cls(){
+              console.log("Clear Executed!");
+              document.getElementById('display').value = "";
+            }
+      </script>
+   </body>
+</html>
+
+
+

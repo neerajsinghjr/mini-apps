@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript | Image Replace</title>
+</head>
+<body>
+
+	<div id="parent">
+		<img src="img/img-1.jpg" alt="fever emoji" id="imgById" class="imgByClass" onclick="secondary()">
+	</div>
+
+	<script>
+
+		/*=========================== IMAGE URL ================================*/
+		
+		// Image 1 | URL
+		/* https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6U8YcLwbLTtc4UNBS5lzxeuo0B5mqCgXzV8bPkeclDIMPeYYJ */
+		// Image 1 | Local
+		// url = 'img/img-1.jpg'
+
+		// Image 2 | URL 
+		/* https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ICKKlzRv1QiL0VSqM93d0Krt0rFnv-_U-aeAIe6CUherRa8k */
+		// Image 2 | Local
+		// url = 'img/img-2.jpg'
+
+		/*=========================== IMAGE URL ================================*/
+
+
+		// Primary Approach
+		/* getElementById() is the only one works because it select the image uniquely & 	   getElementsByClassName doesnt even budge and same for getElementsByTagName()*/
+
+		var imageName = "fever";
+		function primary(){
+			// console.log("Primary Method Response....");
+			var image = document.getElementById('imgById');
+			// console.log(image);
+			if (imageName == "fever"){
+				// console.log(imageName);
+				image.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ICKKlzRv1QiL0VSqM93d0Krt0rFnv-_U-aeAIe6CUherRa8k';
+				image.alt = 'yoyo emoji';
+				// console.log(image);
+				imageName = "yoyo";
+			}else{
+				// console.log(imageName);
+				image.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6U8YcLwbLTtc4UNBS5lzxeuo0B5mqCgXzV8bPkeclDIMPeYYJ";
+				image.alt = "fever emoji";
+				// console.log(image);
+				imageName = "fever";
+			}
+		}
+		
+
+
+
+		// Secondary Approach 
+		/*  */
+
+		var emoji = "yoyo";
+		function secondary(){
+			// console.log("Secondary Executed !");
+			var newElement = document.createElement('img');
+			var parent = document.getElementById('parent').childNodes[0];
+			var oldElement = document.getElementById('imgById');
+			if(emoji == "fever"){
+				newElement.setAttribute('src', 'img/img-2.jpg');
+				newElement.setAttribute('alt', 'Fever Emoji');
+				parent.replaceChild(newElement, oldElement);
+				emoji = "yoyo";
+			}else{
+				newElement.setAttribute('src', 'img/img-1.jpg');
+				newElement.setAttribute('alt', 'Yo Yo Emoji');
+				parent.replaceChild(newElement, oldElement);
+				emoji = "fever";
+			}
+		}
+
+	</script>
+</body>
+</html>
+
+
+

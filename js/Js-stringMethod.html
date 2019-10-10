@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript | String Method</title>
+	<style>
+		.fontColor{
+		color: red;
+		}
+		.fontTitle{
+			color: aqua;
+		}
+		.fontCotent{
+			color: brown;
+		}
+	</style>
+</head>
+<body>
+	<p class="fontTitle">Your String: <strong id="myStr" class="fontColor"></strong></p>
+	<p class="fontTitle">Trim String: <strong id="trimStr" class="fontCotent"></strong></p>
+	<p class="fontTitle">Index(7, 17): <strong id="indexStr" class="fontCotent"></strong></p>
+	<p class="fontTitle">Index(Graduate): <strong id="indexWord" class="fontCotent"></strong></p>
+	<p class="fontTitle">String Length: <strong id="strLength" class="fontCotent"></strong></p>
+	<p class="fontTitle">SubString(7, 17): <strong id="mySubString" class="fontCotent"></strong></p>
+	<p class="fontTitle">SubStr(7, length): <strong id="mySubStr" class="fontCotent"></strong></p>
+	<p class="fontTitle">Slice: <strong id="mySlice" class="fontCotent"></strong></p>
+	<p class="fontTitle">Concat(priStr, secStr): <strong id="myCatStr" class="fontCotent"></strong></p>
+	<p class="fontTitle"><strong id="" class="fontCotent"></strong></p>
+
+	<script>
+		var string = "Good Morning, Everyone!. My Name is Neeraj Singh. I am a Diploma & Bachelor Graduate";
+		var priStr = "Yo Yo ";
+		var secStr = "Honey Singh";
+
+		var myStr = document.getElementById('myStr');
+		//console.log();
+		myStr.innerHTML = string;
+
+		var trim = string.trim();	
+		var trimStr = document.getElementById('trimStr');
+		//console.log();
+		trimStr.innerHTML = trim;
+
+		var index = string.indexOf(7, 17);
+		var indexStr = document.getElementById('indexStr');
+		//console.log(index); //return -1, if string doesn't found.
+		indexStr.innerHTML = index;
+		
+
+		var findIndex = string.indexOf("Graduate");
+		var indexWord = document.getElementById('indexWord');
+		//console.log(index);
+		indexWord.innerHTML = findIndex + 1;
+		
+
+		var length = string.length;
+		var strLength = document.getElementById('strLength');
+		// console.log(length);
+		strLength.innerHTML = length;
+		
+		var subStringResult = string.substring(7, 17);
+		var mySubString = document.getElementById('mySubString');
+		// console.log(subStringResult);
+		mySubString.innerHTML = subStringResult;
+
+		var subStrResult = string.substr(50, length);
+		var mySubStr = document.getElementById('mySubStr');
+		// console.log(subStrResult);
+		mySubStr.innerHTML = subStrResult;
+
+		var slice = string.slice(5, -10);
+		var mySlice = document.getElementById('mySlice');
+		console.log(slice);
+		mySlice.innerHTML = slice;
+
+		var myCat = priStr.concat(secStr);
+		var myCatStr = document.getElementById('myCatStr');
+		console.log(myCat);
+		myCatStr.innerHTML = myCat;
+
+
+	</script>
+
+</body>
+</html>

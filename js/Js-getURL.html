@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript | getURL</title>
+	<link href="style/style.css" rel="stylesheet">
+</head>
+<body>
+
+	<form method="GET" onsubmit="return getUrl()">
+
+		<label for="inputBox">Name: 
+			<input type="text" name="name">
+		</label>
+		<br><br>
+
+		<label for="inputBox">Number: 
+			<input type="number" name="number">
+		</label>
+		<br><br>
+
+		<button type="submit" value="submit">submit</button>
+	</form>
+
+	<button type="submit" onclick="getUrl()" svalue="submit">click</button>
+
+	<script>
+
+		var paramObj = {
+			name: "Neeraj Singh",
+			number: "9211064124",
+			key: "98990XCDFG"
+		};
+
+		function getUrl() {
+			console.log("url !");
+			var url = window.location.href;
+			parseURLParams(url);
+		}
+
+	// function parseURLParams(url) {
+	//     var queryStart = url.indexOf("?") + 1,
+	// 		queryEnd   = url.indexOf("#") + 1 || url.length + 1,
+	//         query = url.slice(queryStart, queryEnd - 1),
+	//         pairs = query.replace(/\+/g, " ").split("&"),
+	//         parms = {}, i, n, v, nv;
+
+	//     if (query === url || query === "") return;
+
+	//     for (i = 0; i < pairs.length; i++) {
+	//         nv = pairs[i].split("=", 2);
+	//         n = decodeURIComponent(nv[0]);
+	//         v = decodeURIComponent(nv[1]);
+
+	//         if (!parms.hasOwnProperty(n)) parms[n] = [];
+	//         parms[n].push(nv.length === 2 ? v : null);
+	//     }
+	//     alert(parms);
+	//     return parms;
+	//    }
+ 
+	    function parseURLParams(url) {
+	    	console.log("parsing")
+	    	var myurl = new URL(url);
+	    	var value1 = myurl.searchParam.get("name");
+	    	var value2 = myurl.searchParam.get("number");
+	    	alert("Name: "+value1);
+	    	alert("Number: "+value2);
+	    }
+	
+	</script>
+
+</body>
+</html>

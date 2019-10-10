@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript | Math</title>
+</head>
+<body>
+	<script>
+		// @ Inputs 
+		var rand = Math.random()*10;
+		var randCeil = Math.ceil(rand);
+		var randRound = Math.round(rand);
+		var randFloor = Math.floor(rand);
+		var exponent = Math.pow(randCeil, randFloor);
+		var squareRoot = Math.sqrt(randRound);
+		var sine = Math.sin(randRound);
+		var cosine = Math.cos(randRound);
+		var tangent = Math.tan(randRound);
+		var secant = 1/sine; 
+		var cosecant = 1/cosine;
+		var cotangent = 1/tangent;
+		var max = Math.max(randCeil, randFloor, randRound, sine, cosine, tangent);
+		var min = Math.min(randCeil, randFloor, randRound, sine, cosine, tangent);
+
+
+		// @ Console
+		console.log(rand);
+		console.log(randCeil);
+		console.log(randRound);
+		console.log(randFloor);
+		console.log(exponent);
+		console.log(squareRoot);
+		console.log(sine);
+		console.log(cosine);
+		console.log(tangent);
+		console.log(secant);
+		console.log(cosecant);
+		console.log(cotangent);
+		console.log(max);
+		console.log(min);
+		
+	</script>
+</body>
+</html>

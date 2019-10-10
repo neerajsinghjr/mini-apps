@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+	<!--========================================
+		# XMl Rules
+		-) All the tags must closed or self Close.
+		-) All the case are in small caps.
+		-) All the attribute must be quote.
+		-) XML elements shall have closing tags.
+		# XML Name Rule 
+		-) Names can contain letters, numbers and 
+		other characters.
+		-) Name cant start with punctuation.
+		-) Name cant start with letters xml.
+		-) Name cant contain spaces.
+	============================================-->
+
+<root>
+
+	<!--========================================
+			Using the standard approach
+	============================================-->
+	<person>
+		<firstname>Neeraj</firstname>
+		<middlename>Singh</middlename>
+		<lastname>Junior</lastname>
+	</person>
+
+	<!--======================================== 
+		 	Using the self closing tags 
+	============================================-->
+	<person type="student" >
+		<first name="Neeraj"/>
+		<middle name="Singh"/>
+		<lastname name="Junior"/>
+		<rollnumber>1604051031</rollnumber>
+	</person>
+
+	
+
+
+
+</root>

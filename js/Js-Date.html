@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript | Date Method</title>
+</head>
+<body>
+	<script>
+		var x = new Date();
+		var unix = new Date(0);
+
+		//@ Inputs
+		var year = x.getFullYear();	//year
+		var month = x.getMonth();	// month
+		var date = x.getDate();	// date
+		var day = x.getDay(); // days
+		var hr = x.getHours(); // hours
+		var min = x.getMinutes(); // minutes
+		var sec = x.getSeconds(); // seconds
+		var ms = x.getMilliseconds();  // milliseconds 0-999
+		var unixMS1 = x.getTime(); // unix milliseconds approach 1
+		var unixMS2 = Date.now();	// unix milliseconds approach 2
+		var norTime = x.toDateString(); // normal time 
+		var utcTime = x.toUTCString(); // utc time string with greenwhich mean time
+		
+		// @ Console
+		console.log(year);
+		console.log(month + 1);
+		console.log(date);
+		console.log(day);
+		console.log(hr + 1);
+		console.log(min + 1);
+		console.log(sec + 1);
+		console.log(ms + 1);
+		console.log(unixMS1);
+		console.log(unixMS2);
+		console.log(unix);
+		console.log(x);
+		console.log(norTime);
+		console.log(utcTime);                                                                                                                                                                                                                                                                                                                                                                                                                    
+	</script>
+</body>
+</html>

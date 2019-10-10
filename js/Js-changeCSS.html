@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascipt | CSS Manipulation</title>
+	<link href="style/style.css" rel="stylesheet">
+</head>
+<body>
+
+	<div id="spin">
+		<img src="img/img-1.jpg" id="rotate">
+	</div>
+
+	<button id="button" onclick="changeCSS()">Click</button>
+
+	<script>
+		function changeCSS() {
+
+			console.log("spin execute !");
+			
+			// var element = document.getElementById("rotate");
+			var element = document.getElementById("spin");
+
+			/* 
+			METHOD 1: USING THE style();
+			*/
+			// element.style.display = "none";
+
+			/* 
+			METHOD 2: USING THE SetAttribute();
+			*/
+			// element.setAttribute("style", "transition: transform 2s; transform: rotate(360);");
+
+			/* 
+			METHOD 3: USING THE CssText();
+			*/
+			temp = element.style.cssText = "transition: transform 2s; transform: rotate(360);";
+		}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html> 
+
+<head> 
+	<link href="style/style.css" rel="stylesheet">
+	<script src="js/jquery-min.js"></script>
+</head> 
+
+<body> 
+	<div> 
+		Welcome to 
+		<span></span>for<span></span>! 
+	</div> 
+	<script> 
+		$(document).ready(function() {
+			$("div").data("test", { 
+				first: "Geeks", 
+				last: "Geeks !" 
+			};
+
+			var result = data("test").first;
+			console.log(result);
+		});
+		
+	</script> 
+</body> 
+
+</html> 

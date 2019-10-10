@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--========================================
+
+	#XML document validation 
+	1) Document Type Defination
+	2) XML Schema	
+
+	# Document Type Validation
+	=> It is defined inside the DOCTYPE element.
+	=> It defines document structure with a list of element and attribute. If everything is defined according to the rules then it must parse it or throw error.
+		-) Implementations -
+			a) Internal Validation
+				Syntax :-
+				<! DOCTYPE 
+				root-element [element-attr]>
+			b) External Validation 
+				Syntax :- 
+				<!DOCTYPE
+				root-element SYSTEM "file" >
+
+============================================-->
+
+
+<!-- Document Type Defination -->
+<!DOCTYPE root SYSTEM "person.dtd">
+
+<root>
+
+	<person>
+		<first>Neeraj</first>
+		<middle>Singh</middle>
+		<last>Junior</last>
+		<mail>NeerajSinghJunior@gmail.com</mail>
+	</person>
+
+	<student>
+		<name>Neeraj Singh Junior</name>
+		<roll>1604051031 &amp; Computer Engg</roll>
+	</student>
+
+</root>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jq | CSS Manipulation</title>
+	<link href="style/style.css" rel="stylesheet">
+	<script src="js/jquery-min.js"></script>
+</head>
+<body>
+	<div class="red-box">
+	</div>
+
+	<script>
+		$(document).ready(function() {
+			console.log("ready!");
+			var control;
+			$("div").on("mouseenter", function() {
+				changeCSS("enter");
+			});
+
+			$("div").on("mouseleave", function() {
+				changeCSS("leave");
+			});
+
+			function changeCSS(control) {
+				console.log(control);
+				console.log("increasing");
+				$("div").css("width","300px");
+				console.log("decreasing");
+				$("div").css("width","100px");
+				
+			}
+		}); // End of ready();
+	</script>
+</body>
+</html>

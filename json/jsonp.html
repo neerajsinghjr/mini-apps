@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jsonp | Apple itunes API</title>
+</head>
+<body>
+
+	<h2>Arijit Singh</h2>
+	<p id="DataTable"></p>
+	<script>
+ 
+		function fetching(obj){
+			var x, data = "";
+			console.log(obj);
+			data += "<table border=1 style='padding:2px 3px;'>" + "<tr><th>Artist ID</th><th>Artist Name</th><th>Track Name</th><th>Track Number</th>" + "<th>Track Price</th>";
+			for (x=0; x < obj.resultCount; x++)
+			{
+				console.log("Index: " + obj.results[x].trackNumber);
+				// Appending data in Table 
+				data += "<tr><td>" + obj.results[x].artistId + "</td><td>" + obj.results[x].artistName + "</td><td>" + obj.results[x].trackName + "</td><td>" + obj.results[x].trackNumber + "</td><td>" + obj.results[x].trackPrice + "</td></tr>";
+			}
+			data += "</table>";
+			document.getElementById("DataTable").innerHTML = data;
+		}
+	</script>
+
+	<!-- Hitting the Itunes API -->
+	<script src="https://itunes.apple.com/search?term=arijit+singh&limit=50&callback=fetching"></script>
+
+</body>
+</html>

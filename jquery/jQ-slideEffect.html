@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery | Slide Effect</title>
+	<link rel="stylesheet" href="style/style.css">
+	<script src="js/jquery-min.js"></script>
+</head>
+<body>
+	
+	<div class="border">
+		<p class="fancy show" id="control" >Touch the bar to expand</p>
+		<p class="fancy hide">This example demonstrate the use of slide method in the jquery.</p>
+	</div>
+
+	<div class="border">
+		<button class="button" type="button" id="show">Show</button>
+		<button class="button" type="button" id="hide">Hide</button>
+	</div>
+
+	<script>
+		var control;
+		$('document').ready(function() {
+			$('#control').click(function() {
+				if(control == 'hide') {
+					$('.hide').slideDown('slow');
+					control = 'show';
+				}else {
+					$('.hide').slideUp('slow');
+					control = 'hide';
+				}
+			});
+
+			$('#show').click(function() {
+				$('.hide').slideDown('4000');
+			});
+
+			$('#hide').click(function() {
+				$('.hide').slideUp('2000');
+			})
+		});
+	</script>
+</body>
+</html>

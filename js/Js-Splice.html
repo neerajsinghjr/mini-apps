@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript | Array Method</title>
+</head>
+<body>
+	<script>
+
+		var array = [10, 20, 30, 40, 50, 60];
+
+		// CASE 1
+		//Splice array contains the removed element like [50 -> 60]
+		//console.log("Splice: "+ array.splice(4)); 
+		//Original array contain the residual elements like [10 -> 20 -> 30 -> 40]
+		//console.log("Array: " + array); 
+
+		// CASE 2
+		//Splice slice the array with index 0 to 3 and append the new value to the index 4;
+		// console.log("Splice: " + array.splice(0, 4, "Hello World")); 
+		//Original array contains the residual value like ["hello World" -> 50 -> 60]
+		// console.log("Array: "+ array);
+
+		// CASE 3
+		//NaN is considered as zero so from 0 to 3, which is [10 -> 20 -> 30]
+		//console.log("Splice: " + array.splice(NaN, 3, "NaN is Zero"))
+		//Original array contains the residual like [NaN is Zero -> 40 -> 50 -> 60]
+		//console.log("Array: " + array);
+
+		// CASE 4
+		//If your try to give the index value more than the length of array then it won't work and new value //will append at the end of the array.
+		// console.log("Splice: "+ array.splice(10, 4, "hello world"));
+		//Original array after append .
+		// console.log("array: " + array);
+
+		// CASE 5
+		//Splice array will must run once from the starting Index 0 to 34 if anyone there.
+		// console.log("Splice: " + array.splice(0, 34));
+		//Original array will be emp0ty because all the elements are drained up in the splice array.
+		// console.log("Array: " + array);
+
+		// CASE 5.1
+		//if you choose the range beyond the boundary then it will remove all the array and the splice array 
+		//will contain the array [10 -> 20 -> 30 -> 40 -> 50 -> 60]
+		// console.log("Splice: " + array.splice(0, 1000, "hello world"));
+		//Original Array will contain only one Element which is ["hello world"]
+		// console.log("Array: " + array)
+		
+	</script>
+</body>
+</html>

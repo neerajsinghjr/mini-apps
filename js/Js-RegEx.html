@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript | Regular Expression</title>
+</head>
+<body>
+	<script>
+		var string = "Hello There, My name\n is NEERAJ SINGH JUNIOR";
+		var testStr = "Hellooo world! Hello W3Schools";
+		
+		var a = /[a-z]/i;	// ignore case
+		var b = /[a-z]/g;	// gobal check
+		var c = /[a-z]/m;	// multiple line
+		
+		var d = /neeraj/i;	// return NEERAJ
+		var e = /neeraj/g;	// return null
+		var f = /neeraj/m;	// return null
+		var g = /NEERAJ/m;	// return NEERAJ from the new line
+		var h = /NEERAJ/g;	// return NEERAJ as well but as object
+
+		var i = /[ER]/mg;	//return the letter 'E' & 'R' in a array from string
+		var j = /[NE]/gi;	// return 4 cases including - 'n', 'e', 'N', 'E'
+
+		var k = /(ER|ll)/gi; // check for 'ER', 'eR', 'Er', ll, 'LL', 'Ll', 'lL'
+
+		var l = /e+/gi; // return contains at least one e. e.g, [e], [e], [e], [e], [EE]
+		var m = /ee*/g; // look for n-1 for high priority e.g, from 'el' first 'e' high priority.
+
+		var test = /lo?/g;
+
+		// console.log(string);
+		// console.log(string.match(l));
+		console.log(testStr.match(test));
+	</script>
+
+</body>
+</html>

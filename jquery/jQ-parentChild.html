@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery | Parent Child Relationship</title>
+	<link href="style/style.css" rel="stylesheet">
+	<script src="js/jquery-min.js"></script>
+</head>
+<body>
+
+	<div class="gramps"> Grandparent<br>
+		<p class="pops"> Father<br>
+			<span class="son">Son<br>
+				<b class="gson">Grand Son<br>
+				</b>
+			</span>
+		</p>
+
+	</div>
+
+	<button class="button" id="parent">Parent</button>
+	<button class="button" id="parents">Parents</button>
+	<button class="button" id="parentsUntil">Parent Until</button>
+
+	<button class="button" id="children">Children</button>
+	<button class="button" id="find">Find</button>
+
+	<!-- Dynamic Input element -->
+	<div id="inputBox">
+	<div>
+
+	<script>
+		$(document).ready(function() {
+			
+			$("#parent").click(function() {
+				// Check for all single parent > daughter;
+				var a = "nothing"; 
+				// Return the direct parent of the selected child;
+				a = $(".gson").parent().css("border-color", "#1E8449");
+			
+			});	// die > parent();
+
+			$("#parents").click(function() {
+				// Check for all the parents > daughter
+				a = $(".gson").parents().css("border-color", "#2471A3")
+			
+			});	// die > parents();
+
+			$("#parentsUntil").click(function() {
+				// Check for all the parentsUntil > daughter
+				a = $(".gson").parentsUntil(".pops").css("border-color", "#1C2833");
+			
+			});	// die > parent()
+			
+			
+			$("#children").delegate("click", function() {
+				$(this).append("<input type='text' class='inputBox' id='myInputBox'>");
+			});
+
+		});	// die > ready();
+	</script>
+
+</body>
+</html

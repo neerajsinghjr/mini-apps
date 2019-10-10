@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<!--========================================
+	
+#ATTLIST are used to define the attribute
+with the respective name, type, default-value.
+	
+SYNTAX-
+<!ATTLIST (root-element, att-name, att-type, default-value)>
+
+#deafult Values 
+	a) #REQUIRED
+	b) #IMPLLIED
+	c) #EMPTY
+
+============================================-->
+
+<!DOCTYPE root [
+
+	<!ELEMENT class (student)>
+	<!ELEMENT student (#PCDATA)>
+	<!ATTLIST student roll CDATA #IMPLIED>
+
+]>
+
+<root>
+	<class>
+		<student roll="1604051031">
+			Neeraj Singh Junior
+		</student>
+	</class>
+</root>

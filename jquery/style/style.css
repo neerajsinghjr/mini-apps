@@ -1,0 +1,153 @@
+/* Default property overwrite */
+body {
+	margin: 2px;
+	padding: 2px;
+}
+
+/* Sample Square box of color - Red and Green */
+.red-box, .green-box {
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	/*padding: 28px 0px;*/
+	font-size: 20px;
+	/*box-sizing: border-box;*/
+	border-radius: 10px;
+}
+
+.red-box {
+	background-color: red;
+}
+
+.green-box {
+	background-color: green;
+}
+
+/* Specifically for Order list, Unordered List */
+.guidelinesTitle {
+	font-size: 30px;
+	font-family: 'Bree Sherif', serif;
+	font-weight: bolder;
+}
+
+.guidelinesList {
+	display: block;
+	margin: 0 auto;
+	list-style: none;
+}
+
+.guidelinesHints {
+	font-size: 25px;
+	color: #cd5cd5;
+	font-family: 'Bree Sherif', serif;
+}
+
+/* Show hide any element */
+.hideToggle {
+	display: none;
+}
+
+/* Styling often used HTML element as same clas name */
+.button {
+	color: #1C3643;
+	font-size: 18px;
+	font-weight: bolder;
+	margin: 5px 1px;
+	padding: 10px;
+	border-radius: 5px 5px;
+	background-color: #b3b3b3;
+	font-family: 'Bree Sherif', serif;
+}
+
+/* Adjusting image with specific property */
+.fancy {
+	width: 100px;
+	height: 100px;
+	margin: 10px auto;
+	color: #7B241C;
+	background-color: #D98880;
+	padding: 10px 10px;
+	border-radius: 15px 5px;
+	font-size: 25px;
+	font-weight: bolder;
+	font-family: 'Bree Sherif', serif;
+	text-align: center;
+	line-height: 28px;
+	border-radius: 50%;
+}
+
+.fancy > p {
+
+}
+
+.fancyYou {
+	width: 300px;
+	height: auto;
+	position: absolute;
+	transition: transform 1s;
+}
+
+.fancyYou:hover {
+	transform: scale(1.25);
+}
+
+/* Centre a block with specific height*/
+.centerBlock {
+	width: 130px;
+	height: 50px;
+	margin: 0 auto;
+}
+
+.outerFrame {
+	width: 300px;
+	height: 450px;
+	margin: 0 auto;
+	overflow: hidden;
+	border-radius: 20px 20px;
+	border: 1px dashed #b3b3b3;
+	position: relative;
+}
+
+
+/* Class for specific  Need ONLY*/
+.HaHaMsg {
+	display: block;
+	margin: 10px 5px;
+	padding: 10px 10px;
+	font-size: 22px;
+	font-family: 'bree-sherif';
+	color: #1ABC9C;
+	background-color: #A3E4D7;
+	border-radius: 340px 23px;
+	text-align: center;
+	text-shadow: 1px 1px #1C2833;
+}
+
+.gramps {
+	border: 5px solid red;
+	display: block;
+  	padding: 5px;
+  	margin: 15px;
+}
+
+.pops {
+	border: 4px solid orange;
+	display: block;
+	padding: 5px;
+  	margin: 15px;
+}
+
+.son {
+	border:3px solid cyan;
+	display: block;
+	padding: 5px;
+  	margin: 15px;
+}
+
+.gson {
+	border: 2px solid yellow;
+	display: block;
+	padding: 5px;
+  	margin: 15px;
+}
+	

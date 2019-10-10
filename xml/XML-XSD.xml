@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<xs:root xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:person>
+		
+		<xs:name name="person-name" type="xs:string"/>
+
+		<xs:roll name="roll-number" type="xs:integer"/>
+
+		<xs:trade name="class-trade" type="xs:string"/>
+
+		<xs:dob name="date-of-birth" type="xs:date"/>
+
+	</xs:person>
+
+</xs:root>

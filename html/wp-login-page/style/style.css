@@ -1,0 +1,113 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Nunito', sans-serif;
+	background-color: #F1F0EF;
+
+}
+
+.container {	
+	width: 400px;
+	height: auto;
+	margin: 100px auto;
+}
+
+.header {
+	width: 400px;
+	height: 400px;
+}
+
+.header-logo img{
+	width: 100px;
+	height: 100px;
+	display: block;
+	margin: 0px auto;
+}
+
+.wordpress-form {
+	width: 320px;
+	height: auto;
+	color: #AFAFAF;
+	font-size: 14px;;
+	background-color: #fff;
+	margin: 10px auto;
+	padding: 40px 20px;
+	box-sizing: border-box;
+	box-shadow: 1px 1px #b3b3b3;
+}
+
+.form-feed {
+	margin: 0px auto;
+	position : relative;
+}
+
+.form-feed label {
+	font-size: 16px;
+	line-height: 32px;
+	color: #282724;
+	display: block;
+	margin: 10px 0px 10px 0px
+
+}
+
+input[type="password"], input[type="email"] {
+	width: 280px;
+	height: 30px;
+	color: #ECEBE8;
+	border-radius: 1px;
+}
+
+.rememberBox {
+	line-height: 40px;
+	font-size: 15px;
+}
+
+.rememberBox input{
+	width: 15px;
+	height: 15px;
+	border: solid #000;
+  	border-width: 3px 3px 3px 3px;
+}
+
+button {
+	/*float: right;*/
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	width: 70px;
+	height: 33px;
+	color: #fff;
+	border-radius: 5px;
+	background-color: #1264B1;
+}
+
+.footer-notes {
+	width: 320px;
+	height: auto;
+	color: #AFAFAF;
+	font-size: 15.2px;
+	line-height: 25px;
+	margin: 0px auto;
+	/*padding: 40px 20px;*/
+	/*box-sizing: border-box;*/
+	/*position: relative;*/
+	/*box-shadow: 1px 1px #b3b3b3;*/
+}
+
+
+.rememberBox span, .submitButton span {
+	margin: 20px 4px 0px 4px;
+}
+
+.footer-notes a{
+	text-decoration: none;
+	color: #3E3E3C;
+}
+
+.footer-notes a:hover{
+	color: #605F5E;
+}
+.footer-notes span {
+	display: block;
+	margin: 5px;
+}
