@@ -1,0 +1,68 @@
+.title {
+	text-align: center;
+	font-size: 1.8em;
+}
+
+.circlePath { 
+	width: 200px;
+	height: 200px;
+	margin: 50px auto; 
+	background-color: DodgerBlue;
+	clip-path : circle(50% at 50% 50%);
+}
+
+.rectPath {
+	width: 200px;
+	height: 200px;
+	margin: 50px auto;
+	background-color: green;
+	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100% 0% 0%);
+}
+
+.insetPath {
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+    background-color: red;
+	clip-path: inset(34% 10% 2% 2%);
+}
+
+.messageClipPath {
+	width: 200px;
+	height: 200px;
+	margin: 50px auto;
+	background-color: aqua;
+	clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 80% 60%, 84% 100%, 70% 60%, 0% 60%, 0% 0%);
+}
+
+.trianglePath {
+	width: 200px;
+	height: 200px;
+	margin: 50px auto;
+	background-color: yellow;
+	clip-path: polygon(50% 0, 100% 100%, 0% 100%, 50% 0%);
+}
+
+.trapezoidalPath {
+	width: 200px;
+	height: 200px;
+	margin: 50px auto;
+	background-color: orange;
+	clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%, 30% 0%);
+}
+
+.arrowPath {
+	width: 200px;
+	height: 200px;
+	margin: 50px auto;
+	background-color: grey;
+	clip-path: polygon(0% 50%, 80% 50%, 50% 0%, 70% 0%, 100% 55%, 70% 100%, 50% 100%, 80% 60%, 0% 60%)
+}
+
+.jesusPath {
+	width: 200px;
+	height: 200px;
+	margin: 50px auto;
+	background-color: blue;
+	clip-path : polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%);
+}

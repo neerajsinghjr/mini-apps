@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Owl Carousel | Testing</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="style/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="style/owl.theme.default.min.css"/>
+	<link rel="stylesheet" href="style/style.css"/>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="owlCarouselCard">
+				<div class="card m-4" style="width: 18rem;">
+					<div class="card-header">
+						<img src="https://wallpapercave.com/wp/wp2320942.jpg" class="card-img-top">
+					</div>
+					<div class="card-body">
+						<h2 class="card-title">Jihyo Park</h2>
+						<h3 class="text-muted">She is my Bias</h3>
+						<p>Everytime she takes away my heart. When she smiles</p>
+						<a href="#">View More</a>
+					</div>
+				</div>
+			</div>
+			<div class="owlCarouselCard">
+				<div class="card m-4" style="width: 18rem;">
+					<div class="card-header">
+						<img src="https://wallpapercave.com/wp/wp2320942.jpg" class="card-img-top">
+					</div>
+					<div class="card-body">
+						<h2 class="card-title">Jihyo Park</h2>
+						<h3 class="text-muted">She is my Bias</h3>
+						<p>Everytime she takes away my heart. When she smiles</p>
+						<a href="#">View More</a>
+					</div>
+				</div>
+			</div>
+			<div class="owlCarouselCard">
+				<div class="card m-4" style="width: 18rem;">
+					<div class="card-header">
+						<img src="https://wallpapercave.com/wp/wp2320942.jpg" class="card-img-top">
+					</div>
+					<div class="card-body">
+						<h2 class="card-title">Jihyo Park</h2>
+						<h3 class="text-muted">She is my Bias</h3>
+						<p>Everytime she takes away my heart. When she smiles</p>
+						<a href="#">View More</a>
+					</div>
+				</div>
+			</div>
+			<div class="owlCarouselCard">
+				<div class="card m-4" style="width: 18rem;">
+					<div class="card-header">
+						<img src="https://wallpapercave.com/wp/wp2320942.jpg" class="card-img-top">
+					</div>
+					<div class="card-body">
+						<h2 class="card-title">Jihyo Park</h2>
+						<h3 class="text-muted">She is my Bias</h3>
+						<p>Everytime she takes away my heart. When she smiles</p>
+						<a href="#">View More</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- javascript | cdn-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.js"></script>
+
+	<script>
+		(function($) {
+			$('.owlCarouselCard').owlCarousel(function() {
+				//autoplay;
+				autoplay: true,
+				// autoplay-interval;
+				autoplayTimeout: 5000	,
+				// autoplay-hover-pause
+				autoplayHoverPause: true,
+
+				// item;
+				item: 3;
+				//mouse-drag;
+				mouseDrag: false,
+				//touch-drag;
+				touchDrag: true,
+
+			});
+
+		}(jQuery))
+	</script>
+
+</body>
+</html>

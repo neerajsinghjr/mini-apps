@@ -1,0 +1,23 @@
+/* Global Child */
+* {
+font-family: georgia;
+font-size: 18px;
+}
+p {
+	display: inline-block;
+}
+
+/* Desendent Child */
+.parent-a .child-a .great-grand-child-a {
+	color: dodgerBlue;
+}
+
+/* Adjancent Child */
+.parent-a > .child-a + .child-b {
+	color: yellow;
+}
+
+.parent-a + .neighbour + .parent-b > .child-a {
+	color: purple;
+}
+/* Desendent Child */

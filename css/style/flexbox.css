@@ -1,0 +1,121 @@
+/* <=================== row-1 ====================>*/
+.row-1 {
+	max-width: 1440px;
+	height: auto;
+	margin: 20px auto;
+	display: flex;
+	box-sizing: border-box;
+}
+.form > .form-feed {
+	margin: 10px;
+	padding: 10px;
+}
+.form-feed {
+	display: block;
+}
+.form .form-feed input {
+	flex: 1;
+	background-color: #b3b3b3;
+}
+
+/* <=================== row-2 ====================>*/
+.row-2 {
+	max-width: 1440px;
+	margin: 20px auto 20px auto;
+	box-sizing: border-box;
+	display: flex;
+}
+.main-para {
+	background-color:#A2503A;
+	flex: 3;
+	order: 2;
+}
+.sidebar-left {
+	background-color: #A2733A;
+	flex: 1;
+	order: 1;
+}
+.sidebar-right{
+	background-color: #E3DB3B;
+	display: flex;
+	flex: 1;
+	order: 3;
+	flex-direction: column;
+}
+.sidebar-a {
+	background-color: #1DC60F;
+}
+.sidebar-b {
+	background-color: #0B9C39;
+}
+.sidebar-a, .sidebar-b {
+	flex: 1;
+	order: 1;
+}
+/* <=================== row-3 ====================>*/
+
+.row-3 {
+	max-width: 1400px;
+	margin: 40px auto;
+}
+.block {
+	/*flex: 1;*/
+	flex-basis: 30%;
+}
+.block:nth-child(1) {
+	background-color: #DD8471;
+} 
+.block:nth-child(2) {
+	background-color: #DDA071;
+} 
+.block:nth-child(3) {
+	background-color: #b3b3b3;
+}
+@media (min-width: 900px) {
+	.row-3 {
+		display: flex;
+		/*align-items: flex-start;*/
+		/*align-items: flex-end;*/
+		/*align-items: center;*/
+		/*justify-content: flex-start;*/
+		/*justify-content: flex-end;*/
+		/*justify-content: center;*/
+		justify-content: space-between;
+	}
+}
+
+/* <=================== row-x ====================>*/
+.row-x {
+	max-width: 800px;
+	margin: 0px auto;
+	width: 400px;
+	height: 600px;
+	background-color: #000;
+	display: flex;
+}
+.row-heading {
+	flex: 1;
+	align-items: center;
+	color: #fff;
+	font-size: 22px;
+}
+/* <=================== row-x ====================>*/
+.row-4 {
+	max-width: 1440px;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #fff;
+}
+.square { 
+	flex: 1;
+	margin: 2px;
+	width: 150px;
+	height: 100px;
+	color: #fff;
+	background-color: #000;
+}
+.square > p {
+	font-size: 24px;
+	font-weight: bolder;
+	margin: auto;
+}
