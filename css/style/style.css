@@ -259,4 +259,18 @@ div-tmp {
 	transform: rotateY(-90deg) translateX(-200px);
 	transform-origin: left;
 }
-/* ------------- Prespective -------*/
+/* ------------------------- Prespective -------------------------*/
+
+
+/* ------------------------- Hover Button  -------------------------*/
+.hover-box {
+	margin: 0 auto;
+	padding: 10px 10px;
+}
+
+.button {
+	padding: 10px 20px;
+	text-align: center;
+	background: #f4511e;
+	color: #fff; 
+}
