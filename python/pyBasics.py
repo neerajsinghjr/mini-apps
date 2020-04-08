@@ -31,3 +31,19 @@
 ### Exploring multiple assignments;
 # first, middle, last = "Neeraj", "Singh", "Junior"
 # print (first, middle, last)
+
+student = {}
+subjects = []
+roll = None   
+temp = None
+print("Welcome to Student Maintenance System ...")
+for x in range(0, 2):
+    roll = input("Student %d Roll No: " %(x+1))
+    count = int(input("Total No Of Subjects: "))
+    tempList = []
+    for y in range(0, count):
+        temp = input("Subject %d: " %(y+1)) 
+        tempList.append(temp)
+    subjects.append(tempList)
+    print(subjects)
+    student[roll] = subjects[x]

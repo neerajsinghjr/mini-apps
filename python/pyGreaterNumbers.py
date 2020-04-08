@@ -1,9 +1,19 @@
 ### Checking greater number between the 3 random numbers;
-import random
 
-# a = random.randint(0,9) 
-# b = random.randint(0,9)
-# c = random.randint(0,9)
+try:
+    a = int(input("You number: "))
+    b = int(input("You number: "))
+    c = int(input("You number: "))
+    
+    if a>b and a>c:
+        print("You number %d is greater than %d, %d" %(a, b, c))
+    elif b>a and b>c:
+        print("You number %d is greater than %d, %d" %(b, a, c))
+    else:
+        print("You number %d is greater than %d, %d" %(c, a, b))
+        
+except Exception as error:
+    print("Exception: ", error)
 
-
-# print(isinstance(a, int))
+finally:
+    print("End !")

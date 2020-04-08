@@ -61,17 +61,20 @@
 # print("Number", '|', number)
 
 ## Intersection: It work on new sets;
-a = {"ayush", "bob", "dude"}  
-b = {"castle", "dude", "emyway"}  
+# a = {"ayush", "bob", "dude"}  
+# b = {"castle", "dude", "emyway"}  
 
-print(a)
-print(a.intersection(b))
+# print(a)
+# print(a.intersection(b))
 
 ## Intersection_update(): It work on original sets;
 a = {"ayush", "bob", "castle"}  
 b = {"castle", "dude", "emyway"}  
 c = {"fuson", "dude", "castle"}  
+d = {"fuson", "dude", "jessi"}  
   
+print(a.union(b, c, d))
+
 # a.intersection_update(b, c)    
 
 ## Frozen set in Set;
