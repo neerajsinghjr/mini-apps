@@ -512,13 +512,134 @@
 ############ 08 April 2020;
 
 ## Program: String inbuilt 5 functions;
-try:
-    string = input("Your String: ")
-    print("1. Convert To Lowercase: %s" %(string.lower()))
-    print("2. Convert To Uppercase: %s" %(string.upper()))
-    print("3. String Split Func: %s" %(string.split(" ")))
-    print("4. Check if Lowercase: %s" %(string.islower()))
-    print("5. Check if uppercase: %s" %(string.isupper()))
+# try:
+#     string = input("Your String: ")
+#     print("1. Convert To Lowercase: %s" %(string.lower()))
+#     print("2. Convert To Uppercase: %s" %(string.upper()))
+#     print("3. String Split Func: %s" %(string.split(" ")))
+#     print("4. Check if Lowercase: %s" %(string.islower()))
+#     print("5. Check if uppercase: %s" %(string.isupper()))
     
+# except Exception as error:
+#     print("Exception Occured.", error)
+
+############ 09 April 2020;
+
+## Program: To Perform Addition, Subtraction, Multiply, Divide, Exit;
+import os;
+try:
+    # Printing menu board;
+    def printMenu():
+        print(" __________________________ ")
+        print("|                          |")
+        print("|______ 1. Addition _______|")
+        print("|______ 2. Subtraction ____|")
+        print("|______ 3. Multiplication__|")
+        print("|______ 4. Divide _________|")
+        print("|______ 5. Exit ___________|")
+        print("|__________________________|")
+        choice = int(input("Your Choice: "))
+        return choice
+
+    # Calculating output;
+    def calculate(first, second, choice):
+        if choice == 1:
+            return first+second
+        elif choice == 2:
+            return first-second
+        elif choice == 3:
+            return first*second
+        else:
+            if second != 0:
+                return first/second
+            else:
+                return False
+        
+    # main program calls;
+    choice = printMenu()
+    while choice < 6:
+        if choice > 0 and choice < 5:
+            first = int(input("Your First Number: "))
+            second = int(input("Your Second Number: "))
+            result = calculate(first, second, choice)
+            if result is not False:
+                print("Result: %f" %(result))
+                choice = input("Continue or Exit (y/n)")
+                if choice == 'y' or choice == 'Y' or choice == 'Yes' or choice == "YES":
+                    os.system("cls||clear")
+                    choice = printMenu()
+                else:
+                    print("Thank You, Successfully Ends ....")
+                    break
+            else:
+                print("Result is reach Unsuccessfull")
+                print("Check your entered input")
+            
+        else:
+            print("Thank You !") 
+            break
+            
+        
 except Exception as error:
-    print("Exception Occured.", error)
+    print("Exception Occured. ", error)
+
+
+# ## Program: sum all the numbers in a list of 10 elements input by the user;
+# try:
+#     sum = 0
+#     temp = 0
+#     list = []
+#     for x in range(0, 10):
+#         temp = int(input("Your Number %d: " %(x+1)))
+#         list.append(temp)
+#         sum += temp
+#     print("Your List: ", list)
+#     print("Sum: ", sum)
+
+# except Exception as error:
+#     print("Exception Occured. ", error)
+
+
+## Program: List of rainbow colours, remove 1, 3, last;
+# try:
+#     temp = 0
+#     name = "RAINBOW"
+#     rainbow = {}
+#     print("RAINBOW Colours List ...")
+#     for x in name:
+#         temp = input("%s means: " %(x))
+#         rainbow[x]=temp
+#         # rainbow.append(temp)
+    
+#     # Display full;
+#     print(rainbow)
+#     # Deleting Elements;
+#     rainbow.pop('R')
+#     rainbow.pop('A')
+#     rainbow.pop('W')
+#     print(rainbow)
+    
+        
+# except Exception as error:
+#     print("Exception Occured. ", error)
+    
+
+## Program: Merge two list using + operator;
+# try:
+#     even = []
+#     odd =[]
+#     list = []
+#     for x in range(0, 20):
+#         if x%2 == 0:
+#             even.append(x)
+#         else:
+#             odd.append(x)
+
+#     list = even+odd
+
+#     print("Even: " ,even)
+#     print("Odd: ", odd)
+#     print("List: ", list)
+
+# except Exception as error:
+#     print("Exception Occured. ", error)
