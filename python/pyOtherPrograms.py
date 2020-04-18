@@ -25,6 +25,7 @@
 # except Exception as error:
 #     print("Something went wrong.", error) 
 
+
 ############ 29 March 2020;
 
 # Program: Convert Kilo To Miles;
@@ -101,6 +102,7 @@
 # finally:
 #     print("Thank you !")
 
+
 ############ 30 March 2020;
 
 ## Program: Replace all 'a' with 'e' in string;
@@ -136,6 +138,7 @@
 
 # except Exception as error:
 #     print("Exception: ", error)
+
 
 ############ 31  March 2020;
 
@@ -195,6 +198,7 @@
 
 # except Exception as error:
 #     print("Unhandled exception.", error)
+
 
 ############ 1 April 2020;
 
@@ -469,6 +473,7 @@
 # except Exception as error:
 #     print("Unhandled Exception: ", error)
 
+
 ############ 07 April 2020;
 
 ## Program: Calculate length of a String without using len() function
@@ -523,65 +528,65 @@
 # except Exception as error:
 #     print("Exception Occured.", error)
 
+
 ############ 09 April 2020;
 
 ## Program: To Perform Addition, Subtraction, Multiply, Divide, Exit;
-import os;
-try:
-    # Printing menu board;
-    def printMenu():
-        print(" __________________________ ")
-        print("|                          |")
-        print("|______ 1. Addition _______|")
-        print("|______ 2. Subtraction ____|")
-        print("|______ 3. Multiplication__|")
-        print("|______ 4. Divide _________|")
-        print("|______ 5. Exit ___________|")
-        print("|__________________________|")
-        choice = int(input("Your Choice: "))
-        return choice
+# import os;
+# try:
+#     # Printing menu board;
+#     def printMenu():
+#         print(" __________________________ ")
+#         print("|                          |")
+#         print("|______ 1. Addition _______|")
+#         print("|______ 2. Subtraction ____|")
+#         print("|______ 3. Multiplication__|")
+#         print("|______ 4. Divide _________|")
+#         print("|______ 5. Exit ___________|")
+#         print("|__________________________|")
+#         choice = int(input("Your Choice: "))
+#         return choice
 
-    # Calculating output;
-    def calculate(first, second, choice):
-        if choice == 1:
-            return first+second
-        elif choice == 2:
-            return first-second
-        elif choice == 3:
-            return first*second
-        else:
-            if second != 0:
-                return first/second
-            else:
-                return False
+#     # Calculating output;
+#     def calculate(first, second, choice):
+#         if choice == 1:
+#             return first+second
+#         elif choice == 2:
+#             return first-second
+#         elif choice == 3:
+#             return first*second
+#         else:
+#             if second != 0:
+#                 return first/second
+#             else:
+#                 return False
         
-    # main program calls;
-    choice = printMenu()
-    while choice < 6:
-        if choice > 0 and choice < 5:
-            first = int(input("Your First Number: "))
-            second = int(input("Your Second Number: "))
-            result = calculate(first, second, choice)
-            if result is not False:
-                print("Result: %f" %(result))
-                choice = input("Continue or Exit (y/n)")
-                if choice == 'y' or choice == 'Y' or choice == 'Yes' or choice == "YES":
-                    os.system("cls||clear")
-                    choice = printMenu()
-                else:
-                    print("Thank You, Successfully Ends ....")
-                    break
-            else:
-                print("Result is reach Unsuccessfull")
-                print("Check your entered input")
+#     # main program calls;
+#     choice = printMenu()
+#     while choice < 6:
+#         if choice > 0 and choice < 5:
+#             first = int(input("Your First Number: "))
+#             second = int(input("Your Second Number: "))
+#             result = calculate(first, second, choice)
+#             if result is not False:
+#                 print("Result: %f" %(result))
+#                 choice = input("Continue or Exit (y/n)")
+#                 if choice == 'y' or choice == 'Y' or choice == 'Yes' or choice == "YES":
+#                     os.system("cls||clear")
+#                     choice = printMenu()
+#                 else:
+#                     print("Thank You, Successfully Ends ....")
+#                     break
+#             else:
+#                 print("Result is reach Unsuccessfull")
+#                 print("Check your entered input")
+
+#         else:
+#             print("Thank You !") 
+#             break
             
-        else:
-            print("Thank You !") 
-            break
-            
-        
-except Exception as error:
-    print("Exception Occured. ", error)
+# except Exception as error:
+#     print("Exception Occured. ", error)
 
 
 # ## Program: sum all the numbers in a list of 10 elements input by the user;
@@ -643,3 +648,241 @@ except Exception as error:
 
 # except Exception as error:
 #     print("Exception Occured. ", error)
+
+
+############ 13 April 2020;
+
+# Program: Insert given string X into 2nd position in list Y
+# list = [10 ,20 ,30 ,50]
+# print("Before Insertion: ", list)
+# list.insert(2, 10000)
+# print("After Insertion: ", list)
+
+# Program:
+# Q1: Create empty dictionary and then add multiple elements .
+# Q2: Program: add key to a dictionary and print all the values
+
+# try:
+#     temp="";
+#     student={}
+#     count=int(input("Enter number of student: "))
+#     for x in range(0, count):
+#         temp=input("Student Name [%d]: " %(x+1))
+#         student[x]=temp
+#     print("Keys: ", student.keys())
+#     print("Values: ", student.values())
+#     print("Dictionary: ", student)
+
+# except Exception as error:
+#     print("Exception catch.", error);
+
+
+# Program: Add dict2 elements into dict1 and print it , use update 
+# dict1 = {1: "one", 2: "three"}
+# dict2 = {2: "two"}
+
+# dict1.update(dict2)
+# print(dict1)
+
+
+############ 15 April 2020;
+
+## Program: Change the first and last character of the string;
+# try: 
+#     newString = ""
+#     string = input("Enter String: ")
+#     first = input("Enter first Character: ")
+#     last = input("Enter last Character: ")
+#     for x in range(0, len(string)):
+#         if x == 0:
+#             newString += first
+#         elif x == len(string)-1:
+#             newString += last
+#         else:
+#             newString += string[x]
+    
+#     print("Your String: %s" %(newString))
+
+# except Exception as error: 
+#     print("Exception catch !", error)
+
+## Program: Input from the user and displays that input back in upper and lower cases;
+# try: 
+#     string = input("Enter String: ")
+#     print("Uppercase: %s" %(string.upper()))
+#     print("Lowercase: %s" %(string.lower()))
+
+# except Exception as error: 
+#     print("Exception catch !", error)
+
+## Program: Remove the characters which have odd index values of a given string.
+# try:
+#     strOdd= ""
+#     string = input("Your String: ")
+#     for x in range(0, len(string)):
+#         if x%2 != 0:
+#             strOdd += string[x]
+    
+#     print("String Without Odd Index: %s" %(strOdd))
+
+# except Exception as error: 
+#     print("Exception catch !", error);
+
+
+############ 16 April 2020;
+
+## Program: to get the largest number from a list.
+# try: 
+#     temp = 0
+#     myList = []
+#     items = int(input("How many items are there: "))
+#     for x in range(0, items):
+#         temp = input("List [%d]: " %(x+1))
+#         myList.append(temp)
+#     print("Max Element: %s" %(max(myList)))
+
+# except Exception as error:
+#     print("Exception catched !")
+#     print("Error: ", error)
+
+# finally:
+#     print("Thank You!")
+
+
+## Program: to multiplies all the items in a list.
+# try: 
+#     list = [12, 13, 15, 16, 20]
+#     newList = list * 2
+#     print("Original List: ", list)
+#     print("Mulitiplied List: ", newList)
+    
+# except Exception as error:
+#     print("Exception catched !")
+#     print("Error: ", error)
+
+# finally:
+#     print("Thank You!")
+
+
+## Program: to remove duplicates from a list.
+# try: 
+#     duplicatedList = [12, 13, 15, 16, 20, 12, 13, 15, 16, 20]
+#     print("Original Duplicated List ... \n", duplicatedList)
+#     # Remove duplicacy;
+#     filteredSet = set(duplicatedList)
+#     # Converting to list;
+#     filteredList = list(filteredSet)
+#     print("Filter List ... \n ", filteredList)
+
+# except Exception as error:
+#     print("Exception catched !")
+#     print("Error: ", error)
+
+# finally:
+#     print("Thank You!")
+
+
+############ 17 April 2020;
+
+## Program: Function that takes two lists and returns True if they have at least one common member.
+# try: 
+#     # Check intersection between two list;
+#     def checkIntersection(firstList, secondList):
+#         firstSet = set(firstList)
+#         secondSet = set(secondList)
+#         value = firstSet.intersection(secondSet)
+#         if value:
+#             return True
+#         else :   
+#             return False
+
+#     # building program ladders;
+#     def makeProgram():
+#         temp = 0
+#         firstList = []
+#         secondList = []
+#         firstCount = int(input("Enter number of element in List A: "))
+#         secondCount = int(input("Enter number of element in List B: "))
+#         # Taking values of List A;
+#         for x in range(0, firstCount):
+#             temp = input("List A [%d]: " %(x+1))
+#             firstList.append(temp)
+        
+#         # Taking values in List B;
+#         for x in range(0, secondCount):
+#             temp = input("List B [%d]: " %(x+1))
+#             secondList.append(temp)
+
+#         # Checking Intersection;
+#         if checkIntersection(firstList, secondList) == True:
+#             print("True")
+#         else:
+#             print("False")
+
+#     # main program execution;
+#     makeProgram()
+        
+# except Exception as error:
+#     print("Exception catched !")
+#     print("Error: ", error)
+
+# finally:
+#     print("Thank You!")
+
+## Program: to convert a list of characters into a string.
+# try: 
+#     charList = ['a' , 'e', 'i', 'o', 'u']
+#     print("Character List \n", charList)
+#     print("Type of Character List \n", type(charList))
+#     strList = str(charList)
+#     print("String Character List \n", strList)
+#     print("Type of String Character List \n", type(strList))
+
+# except Exception as error:
+#     print("Exception catched !")
+#     print("Error: ", error)
+
+# finally:
+#     print("Thank You!")
+
+# # Program: to find common items from two lists.
+# try: 
+#     # Check intersection between two list;
+#     def checkIntersection(firstList, secondList):
+#         firstSet = set(firstList)
+#         secondSet = set(secondList)
+#         values = firstSet.intersection(secondSet)
+#         if values:
+#             print("Intersecting Values ... \n", values)
+#         else :   
+#             print("Sorry, No Intersecting Values Found !")
+
+#     # building program ladders;
+#     def makeProgram():
+#         temp = 0
+#         firstList = []
+#         secondList = []
+#         firstCount = int(input("Enter number of element in List A: "))
+#         secondCount = int(input("Enter number of element in List B: "))
+#         # Taking values of List A;
+#         for x in range(0, firstCount):
+#             temp = input("List A [%d]: " %(x+1))
+#             firstList.append(temp)
+        
+#         # Taking values in List B;
+#         for x in range(0, secondCount):
+#             temp = input("List B [%d]: " %(x+1))
+#             secondList.append(temp)
+
+#         # Checking Intersection;
+#         checkIntersection(firstList, secondList)
+
+#     # main program execution;
+#     makeProgram()
+
+# except Exception as error: 
+#     print("Exception Catched !")
+#     print("Exception: ", error)
+
+# finally:
+#     print("Thank You!")
