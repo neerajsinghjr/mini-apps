@@ -886,3 +886,372 @@
 
 # finally:
 #     print("Thank You!")
+
+
+############ 20 April 2020;
+
+## Program: check if the number is in pallindrome;
+# try:
+#     reverse = 0
+#     temp = number=int(input("Your number: "))
+#     while temp !=  0:
+#         rem = temp % 10
+#         reverse = reverse * 10 + rem
+#         temp = temp // 10
+#         # While Loop End;
+#     # print(reverse)
+#     # print(number)
+#     if number == reverse: 
+        
+#         print("Pallindrome test result: Success")
+#     else:
+#         print("Pallindrome test result: False")
+
+# except Exception as error:
+#     print("Exception catched ", error)
+
+# finally:
+#     print("Thank You!")
+
+
+############ 21 April 2020;
+
+## Program: Find the middle three chars of the odd length given string;
+# try:
+#     string = input("Enter String of Odd Length: ")
+#     midStr = "";
+#     length = len(string)
+#     # Cross check string length;
+#     if length%2 != 0 :
+#         count = 0
+#         mid = length // 2
+#         for x in range(mid, length):
+#             if count != 3:
+#                 midStr += string[x]
+#             else:
+#                 break
+#         print("Given String: %s" %(string))
+#         print("Middle String: %s" %(midStr))
+#     else:
+#         print("Sorry, Program require string length of odd length, eg, India")
+
+# except Exception as error:
+#     print("Exception catched ", error)
+
+# finally:
+#     print("Thank You!")
+    
+## Program: Inspect all occruence of "USA" in given string;
+# try:
+#     string = input("Your String: ").lower()
+#     list = ["u", "s", "a"]    
+#     print("Given String: %s" %(string))
+#     for x in list:
+#         print("Length of %c: %d" %(x, string.count(x)))
+
+# except Exception as error:
+#     print("Exception catched ", error)
+
+# finally:
+#     print("Thank You!")
+
+
+############ 22 April 2020;
+
+## Program: function calculation(), accept two variable return addition and subtraction of it 
+# try:
+#     def calculation(a, b):
+#         add = a+b
+#         sub = a-b
+#         return [add, sub]
+
+#     # Input Values
+#     a = int(input("Enter value a: "))
+#     b = int(input("Enter value b: "))
+#     dic = calculation(a, b)
+#     print(dic, type(dic))
+#     print("Addition: ", dic[0])
+#     print("Subtraction: ", dic[1])
+
+# except Exception as error:
+#     print("Exception caught ", error)
+
+# finally:
+#     print("Thank you!")
+
+## Program: functional employees(), accept (name, salary) variable, return 9000 if salary is missing.
+# try:
+#     def employees(name, salary="9000"):
+#         print("Employess Details ...")
+#         print("Employee's Name: %s" %(name))
+#         print("Employee's salary: %s" %(salary))
+#     # Check For Salary Variable;
+#     name = input("Employee 's Name: ")
+#     salary = input("Employee 's Salary (OPTIONAL): ")
+#     employees(name) if salary == "" else employees(name, salary)
+    
+# except Exception as error:
+#     print("Exception caught ", error)
+
+# else:
+#     print("Thank You !")
+
+# finally:
+#     print("Exiting ...")
+
+
+############ 24 April 2020;
+## Program: Sort a numberical list of python
+# try:
+#     temp = 0
+#     myList = []
+#     count = int(input("Enter the number of items to sort: "))
+#     # Creating List;
+#     for x in range(0, count):
+#         temp = int(input("Enter Value at Index %d: " %(x+1)))
+#         myList.append(temp)
+    
+#     # Printing result;
+#     print("User's List", myList)
+#     myList.sort()
+#     print("Sorted List: ", myList)
+    
+# except Exception as error:
+#     print("Exception traced.", error)
+
+# else:
+#     print("Program Terminates Successfully ...")
+
+# finally:
+#     print("Exiting ...")
+
+
+############ 28 April 2020;
+# Program: Search for a given number inside a list of 10 numbers;
+# import os
+# try:
+#     number = 0
+#     myList = []
+#     # Creating list;
+#     for x in range(0, 10):
+#         number = int(input("Enter Value at Index %d: " %(x+1)))
+#         myList.append(number)
+#     os.system("cls || clear")
+#     # Searching in list;
+#     number = int(input("Search for anything: " ))
+#     count = myList.count(number)
+#     # Printing Result;
+#     print("Search Success") if count != 0 else print("Search Failed !");
+    
+# except Exception as error:
+#     print("Exception traced.", error)
+
+# else:
+#     print("Program Terminates Successfully ...")
+
+# finally:
+#     print("Exiting ...")
+
+## Program: Print Numbers - 1. Positive 2. Negative 3. Even 4. Odd 5. Zero's - inside list of 20 numbers;
+# import os
+
+# # Check For Positive;
+# def checkIfPositive(number):
+#     if number > 0:
+#         # print("Positive Number: %d" %(number))
+#         return True
+#     return False
+
+# # Check For Negative;
+# def checkIfNegative(number):
+#     if number < 0:
+#         return True
+#     return False
+        
+# # Check For Even;
+# def checkIfEven(number):
+#     if number == 0:
+#         return False
+#     elif number %2 == 0:
+#         return True
+#     return False
+    
+# def checkIfOdd(number):
+#     if number %2 != 0:
+#         return True
+#     # return to main;
+#     return False
+
+# def checkIfZero(number):
+#     if number == 0:        
+#         return True
+#     # returnt to main;
+#     return False
+    
+# try:
+#     number = 0
+#     myList = []
+#     # Creating list;
+#     for x in range(0, 20):
+#         number = int(input("Enter Value at Index %d: " %(x+1)))
+#         myList.append(number)
+    
+#     os.system("cls || clear")
+        
+#     # Checking List;
+#     for number in myList:
+#         # Check For Positive;
+#         if checkIfPositive(number):
+#             print("Positive:", number)
+#             # Check For Even and Odd;
+#             if checkIfEven(number):
+#                 print("Even Number:", number)
+#             else:
+#                 print("Odd Number:", number)
+#         # Check for Negative;
+#         elif checkIfNegative(number):
+#             print("Negative:", number)
+#         # Check For Zeros;
+#         elif checkIfZero(number):
+#             print("Zero:", number)
+#         else:
+#             print("Something unexpected occured !")
+    
+# except Exception as error:
+#     print("Exception traced.", error)
+
+# else:
+#     print("Program Terminates Successfully ...")
+
+# finally:
+#     print("Exiting ...")
+
+
+############ 29 April 2020;
+## Program: To check when the given number is an Armstrong;
+
+# # Converting to Armstrong ...
+# def convertToArmstrong(number):
+#     myList = []
+#     temp = number
+#     # Breaking the digits;
+#     while temp != 0:
+#         rem = temp % 10
+#         myList.append(rem)
+#         temp = temp // 10
+#     # Check sum of cubes;
+#     for x in myList:
+#         temp += x**3
+#     return temp  
+    
+# # Check If Armstrong is there ...
+# def checkIfArmstrong(number):
+#     convertedNumber = convertToArmstrong(number)
+#     if number == convertedNumber:
+#         return True
+#     # return to main        
+#     return False
+
+# # Main Program Execution;
+# try:
+#     number = int(input("Your number: "))
+#     if checkIfArmstrong(number):
+#         print("Armstrong Test Successfull...")
+#     else:
+#         print("Armstring Test Un-Successfull")     
+    
+# except Exception as error:
+#     print("Exception traced.", error)
+
+# else:
+#     print("Program Terminates Successfully ...")
+
+# finally:
+#     print("Exiting ...")
+
+## Program : Print fibonacci series first 20, starting from 0 and 1;
+# # Main Program Execution;
+# try:
+#     count  = 2
+#     first = 0
+#     second = 1
+#     # Default one;
+#     print(first, "|-->", end=" ")
+#     print(second, "|-->", end=" ")
+
+
+#     # Making Fibonacci Series;
+#     for x in range(0, 20):
+#         # Termination of Loop;
+#         if count == 20:
+#             break
+#         count += 1
+#         second = first + second
+#         first = second - first
+#         print(second, "|-->", end=" ") 
+        
+
+# except Exception as error:
+#     print("Exception traced.", error)
+
+# else:
+#     print("Program Terminates Successfully ...")
+
+# finally:
+#     print("Exiting ...")
+
+############ 30 April 2020;
+## Program: Print nth number of fibonacci series;
+# try:
+#     first = 0
+#     second = 1
+#     number = int(input("Fibonacci Series Starting From 0,1 To Your Limit (Limit greater than 2): "))
+#     # Raise error for uncertainity;
+#     if number < 3:
+#         raise ValueError
+#     # Default one;
+#     print(first, "|-->", end=" ")
+#     print(second, "|-->", end=" ")
+#     # Making Fibonacci Series;
+#     for x in range(0, number):
+#         second = first + second
+#         first = second - first
+#         print(second, "|-->", end=" ") 
+    
+# except ValueError:
+#     print("Exception occured invalid value ...")
+
+# except Exception as error:
+#     print("Exception traced.", error)
+
+# else:
+#     print("Program Terminates Successfully ...")
+
+# finally:
+#     print("Exiting ...")
+
+## Program: To Print even length words in the string;
+# try:
+#     string = input("Enter String To Find Even Length Word: ")
+#     strList = string.split(" ")
+
+#     # Printing Even Words
+#     for str in strList:
+#         strLength = len(str)
+#         if strLength % 2 == 0:
+#             print("String Word: '%s' || Length: %d" %(str, strLength))
+
+# except ValueError:
+#     print("Exception occured invalid value ...")
+
+# except Exception as error:
+#     print("Exception traced.", error)
+
+# else:
+#     print("Program Terminates Successfully ...")
+
+# finally:
+#     print("Exiting ...")
+
+############ 01 May 2020;
+
